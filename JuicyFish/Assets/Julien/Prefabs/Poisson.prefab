@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionToGo: {x: 0, y: 0, z: 0}
   speed: 5
+  socialDistancing: 1
 --- !u!1 &4935753734715533497
 GameObject:
   m_ObjectHideFlags: 0

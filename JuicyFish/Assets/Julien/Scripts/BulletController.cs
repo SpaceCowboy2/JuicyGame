@@ -7,7 +7,6 @@ public class BulletController : MonoBehaviour {
 	private Transform bullet;
 	public float speed;
 
-	// Use this for initialization
 	void Start () {
 		bullet = GetComponent<Transform> ();
 	}
@@ -24,6 +23,7 @@ public class BulletController : MonoBehaviour {
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 			PlayerScore.playerScore += 10;
+			FishArrival.Instance.FishSpawn();
 		} else if (other.tag == "Base")
 			Destroy (gameObject);
 	}

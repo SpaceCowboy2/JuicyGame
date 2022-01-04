@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FishMove : MonoBehaviour
 {
@@ -8,16 +9,24 @@ public class FishMove : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    void Start()
+    private float sinusTime;
+    private void Start()
     {
-        //positionToGo = ;
+        positionToGo = (Random.insideUnitCircle * 2) * positionToGo;
+
+
     }
 
 
     void Update()
-    {
-        Debug.Log(positionToGo);
-        speed += Time.deltaTime;
-        Vector3.Lerp(transform.position, Vector3.zero, speed);
+    { 
+        transform.DOMoveX(positionToGo.x, speed);
+
+        sinusTime += Time.deltaTime;
+        if(sinusTime > speed)
+        {
+            return;
+        }
+        transform.position = new Vector2(transform.position.x, Mathf.Sin(sinusTime) + positionToGo.y);
     }
 }

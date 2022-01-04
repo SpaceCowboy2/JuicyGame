@@ -2555,6 +2555,7 @@ GameObject:
   - component: {fileID: 1989556095}
   - component: {fileID: 1989556098}
   - component: {fileID: 1989556096}
+  - component: {fileID: 1989556099}
   m_Layer: 0
   m_Name: JuiceManager
   m_TagString: Untagged
@@ -2617,6 +2618,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   juiceBackground: {fileID: 10811949}
   isJuiceBG: 0
+--- !u!114 &1989556099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989556094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a98247cc47adc4e8e802b95e491253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToShow: 9000
+  textToShow: {fileID: 377409842132263659, guid: ce28cee0c2f103f4695f46458f1ba772, type: 3}
+  textParent: {fileID: 1093427003}
 --- !u!4 &2003605169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8308480461726989344, guid: bcf23cb16f1a38e48a28e5ddc82afb12, type: 3}

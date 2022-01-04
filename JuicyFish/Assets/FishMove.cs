@@ -20,7 +20,7 @@ public class FishMove : MonoBehaviour
     private void RandomPosition()
     {
         positionToGo = (Random.insideUnitCircle * security) * positionToGo;
-        positionToGo = new Vector3(positionToGo.x, positionToGo.y + security);
+        positionToGo = new Vector3(positionToGo.x - Random.Range(0, security), positionToGo.y + security);
 
         foreach (FishMove Fish in FindObjectsOfType<FishMove>())
         {

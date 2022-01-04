@@ -21,6 +21,8 @@ public class BulletController : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Enemy") {
 			FishArrival.Instance.FishSpawn(other.gameObject);
+			ScoreAppear.Instance.ShowScore(other.gameObject);
+
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 			PlayerScore.playerScore += 10;

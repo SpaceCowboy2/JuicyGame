@@ -20,10 +20,10 @@ public class BulletController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Enemy") {
+			FishArrival.Instance.FishSpawn(other.gameObject);
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 			PlayerScore.playerScore += 10;
-			FishArrival.Instance.FishSpawn();
 		} else if (other.tag == "Base")
 			Destroy (gameObject);
 	}

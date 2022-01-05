@@ -24,16 +24,6 @@ public class FishArrival : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void FishSpawn(GameObject killedFish)
     {
         int rotator = 0;

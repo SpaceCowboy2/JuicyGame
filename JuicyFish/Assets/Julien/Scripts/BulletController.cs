@@ -7,7 +7,6 @@ public class BulletController : MonoBehaviour {
 	private Transform bullet;
 	public float speed;
 
-	// Use this for initialization
 	void Start () {
 		bullet = GetComponent<Transform> ();
 	}
@@ -21,6 +20,9 @@ public class BulletController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.tag == "Enemy") {
+			FishArrival.Instance.FishSpawn(other.gameObject);
+			ScoreAppear.Instance.ShowScore(other.gameObject);
+
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 			PlayerScore.playerScore += 10;

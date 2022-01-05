@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  fshArrival: {fileID: 5582791381026788785, guid: b5468a91fb4089247a50fbc7aeb9e736, type: 3}

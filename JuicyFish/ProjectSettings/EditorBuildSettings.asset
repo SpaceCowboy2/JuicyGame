@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/URP/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Julien/SpaceInvaderMain.unity
+    path: Assets/SpaceInvaderMain.unity
     guid: c27047d60515c3a4e97cb4c7dd8c2f04
   m_configObjects: {}

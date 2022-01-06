@@ -16,14 +16,12 @@ public class TextSpawn : MonoBehaviour
 
     void Awake ()
     {
-        //scoreText.text = scoreFinder.ToString();
         scoreText = GetComponent<TextMeshProUGUI>();
         scoreText.text = 10f.ToString();
         spawnPos = transform.position;
         StartCoroutine(FadeTextToZeroAlpha(1f, GetComponent<TextMeshProUGUI>()));
         StartCoroutine(TextHelium(1f, GetComponent<TextMeshProUGUI>()));
     }
-
 
     public IEnumerator TextHelium(float t, TextMeshProUGUI i)
     {
@@ -43,5 +41,6 @@ public class TextSpawn : MonoBehaviour
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
             yield return null;
         }
+        Destroy(this.gameObject);
     }
 }

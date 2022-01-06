@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	private Transform player;
 	public float speed;
 	public float maxBound, minBound;
+	public ParticleSystem bubbles;
 
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -14,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 
 	private float nextFire;
 
-	// Use this for initialization
 	void Start () {
 		player = GetComponent<Transform> ();
 	}
@@ -31,9 +31,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update(){
+
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			bubbles.Play();
 		}
 	}
 

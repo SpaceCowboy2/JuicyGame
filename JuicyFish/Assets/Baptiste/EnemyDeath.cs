@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
-    public static EnemyDeath InstanceED;
     public ParticleSystem deathPS;
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet")
+            bubblesExplosion();
+    }
+
 
     public void bubblesExplosion()
     {
-        Debug.Log("OUi");
         deathPS.Play();
     }
 }

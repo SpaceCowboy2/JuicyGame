@@ -10,7 +10,6 @@ public class FishArrival : MonoBehaviour
 
 
     public static FishArrival Instance;
-
     void Awake()
     {
         if (Instance != null)

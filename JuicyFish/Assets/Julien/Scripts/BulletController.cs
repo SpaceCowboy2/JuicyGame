@@ -22,6 +22,7 @@ public class BulletController : MonoBehaviour {
 		if (other.tag == "Enemy") {
 			FishArrival.Instance.FishSpawn(other.gameObject);
 			ScoreAppear.Instance.ShowScore(other.gameObject);
+			EnemyDeath.InstanceED.bubblesExplosion();
 
 			Destroy (other.gameObject);
 			Destroy (gameObject);

@@ -23,12 +23,13 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bullet")
-            bubblesExplosion();
+            deathCoral();
     }
 
 
-    public void bubblesExplosion()
+    public void deathCoral()
     {
         deathPS.Play();
+        //Faire aparaitre le corail au fond
     }
 }

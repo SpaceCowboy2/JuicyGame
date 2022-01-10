@@ -23,10 +23,10 @@ public class BulletController : MonoBehaviour {
 			FishArrival.Instance.FishSpawn(other.gameObject);
 			ScoreAppear.Instance.ShowScore(other.gameObject);
 
-			other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-			other.gameObject.GetComponent<Collider>().enabled = false;
+			//other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+			//other.gameObject.GetComponent<Collider>().enabled = false;
 
-			Destroy(other.gameObject, 2f);
+			//Destroy(other.gameObject, 2f);
 			Destroy (gameObject);
 			PlayerScore.playerScore += 10;
 		} else if (other.tag == "Base")

@@ -205,6 +205,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (7)
@@ -272,6 +276,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (8)
@@ -327,6 +335,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5745976150406363406, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
   m_PrefabInstance: {fileID: 166127206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &325445043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325445044}
+  m_Layer: 0
+  m_Name: GoodCoral
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325445044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325445043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416656903
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +499,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral
@@ -727,6 +769,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (15)
@@ -882,6 +928,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (12)
@@ -944,6 +994,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (16)
@@ -1006,6 +1060,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (3)
@@ -1068,6 +1126,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (9)
@@ -1187,6 +1249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (17)
@@ -1249,6 +1315,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (5)
@@ -1515,6 +1585,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (6)
@@ -1729,6 +1803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (10)
@@ -1843,6 +1921,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (2)
@@ -1905,6 +1987,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (11)
@@ -2033,6 +2119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (4)
@@ -2095,6 +2185,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (1)
@@ -2239,6 +2333,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (14)
@@ -2448,6 +2546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864900163}
     m_Modifications:
+    - target: {fileID: -6174128831691178696, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
+      propertyPath: coralParent
+      value: 
+      objectReference: {fileID: 325445043}
     - target: {fileID: 4969192710040069044, guid: 6bd4206b6d8df9943bd936caa73629e8, type: 3}
       propertyPath: m_Name
       value: EnnemyCoral (13)

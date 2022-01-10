@@ -127,11 +127,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathPS: {fileID: 5289682571025516317}
-  colors:
-  - {fileID: 2100000, guid: 577b1d6454c5c2047bc16ee520194a34, type: 2}
+  deadColors:
   - {fileID: 2100000, guid: 56751b606fed7ac4f9efba865581aa68, type: 2}
   - {fileID: 2100000, guid: ebd474bfa40ce6b458fcfdae9a093a5b, type: 2}
   - {fileID: 2100000, guid: 7dab6f07f8814264d9d55b30b2382455, type: 2}
+  - {fileID: 2100000, guid: 577b1d6454c5c2047bc16ee520194a34, type: 2}
+  liveColors:
+  - {fileID: 2100000, guid: b2a1e0fa1c992c842bc184512769b064, type: 2}
+  - {fileID: 2100000, guid: 96996bb94496d1548be933c47865080b, type: 2}
+  - {fileID: 2100000, guid: b33b939bbc7b6ea4a8962e38915db223, type: 2}
+  - {fileID: 2100000, guid: 258e0c01c762d7743b4768af123f20c9, type: 2}
+  coralColor: {fileID: 0}
+  coralParent: {fileID: 0}
 --- !u!1 &7083972251282979905
 GameObject:
   m_ObjectHideFlags: 0

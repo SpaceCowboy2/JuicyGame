@@ -139,6 +139,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 258e0c01c762d7743b4768af123f20c9, type: 2}
   coralColor: {fileID: 0}
   coralParent: {fileID: 0}
+  newPos: {x: 0, y: 0}
+  socialDistancing: 1
 --- !u!1 &7083972251282979905
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +154,7 @@ GameObject:
   - component: {fileID: 5502095697374440084}
   m_Layer: 0
   m_Name: Death
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

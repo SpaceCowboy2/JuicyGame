@@ -12,7 +12,6 @@ public class EnemyController : MonoBehaviour {
 	public TextMeshProUGUI winText;
 	public float fireRate = 0.997f;
 
-	// Use this for initialization
 	void Start () {
 		winText.enabled = false;
 		InvokeRepeating ("MoveEnemy", 0.1f, 0.3f);

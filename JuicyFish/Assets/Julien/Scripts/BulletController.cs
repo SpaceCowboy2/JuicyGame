@@ -19,15 +19,14 @@ public class BulletController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		if (other.tag == "Enemy") {
+		if (other.CompareTag("Enemy")) {
+			other.enabled = false;
+
 			FishArrival.Instance.FishSpawn(other.gameObject);
 			ScoreAppear.Instance.ShowScore(other.gameObject);
 
-			//other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-			//other.gameObject.GetComponent<Collider>().enabled = false;
-
+			Destroy(gameObject);
 			//Destroy(other.gameObject, 2f);
-			Destroy (gameObject);
 			PlayerScore.playerScore += 10;
 		} else if (other.tag == "Base")
 			Destroy (gameObject);

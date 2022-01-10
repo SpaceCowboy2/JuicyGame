@@ -19,11 +19,16 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject coralParent;
 
+    [HideInInspector]
+    public Vector2 newPos;
 
     private int colorIndex;
     private float speed = 4;
     private Material mat1;
     private Material mat2;
+
+    [Min(0.25f)]public float socialDistancing;
+    private int security = 0;
 
     private void Start()
     {
@@ -42,16 +47,38 @@ public class Enemy : MonoBehaviour
 
     public void deathCoral()
     {
-        gameObject.tag = "Untagged";
-        Vector3 deathpos = transform.position;
+        //Vector3 deathpos = transform.position;
         deathPS.Play();
-        transform.SetParent(coralParent.transform);
-        transform.DOMoveY(-6.5f, speed);
-        transform.DOMoveX(Random.Range((deathpos.x - 4f), (deathpos.x + 4f)), speed);
+
+        RandomPosition();
 
         mat1 = deadColors[colorIndex];
         mat2 = liveColors[colorIndex];
         GetComponent<MeshRenderer>().material = mat2;
+
         //GetComponent<MeshRenderer>().material.Lerp(mat1, mat2, Mathf.PingPong(Time.time, speed) / speed);
+    }
+
+    private void RandomPosition()
+    {
+        Vector3 deathpos = transform.position;
+
+        newPos = new Vector2(Random.Range((deathpos.x - 4f - security), (deathpos.x + 4f + security)), -6.5f);
+
+        transform.SetParent(coralParent.transform);
+        transform.DOMove(newPos, speed);
+
+        foreach (Enemy Enemy in FindObjectsOfType<Enemy>())
+        {
+            if (Enemy != this)
+            {
+                if (Vector3.Distance(newPos, Enemy.newPos) < Random.Range(0.25f, socialDistancing))
+                {
+                    security++;
+                    RandomPosition();
+                    return;
+                }
+            }
+        }
     }
 }

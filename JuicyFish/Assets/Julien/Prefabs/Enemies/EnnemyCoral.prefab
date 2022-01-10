@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2646635402951283009}
   - component: {fileID: -6174128831691178696}
   m_Layer: 0
-  m_Name: CoralA V
+  m_Name: EnnemyCoral
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4969192710040069044}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b2a1e0fa1c992c842bc184512769b064, type: 2}
+  - {fileID: 2100000, guid: 168f5ae2b392ae1409589c015cf1aa68, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,6 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathPS: {fileID: 5289682571025516317}
+  colors:
+  - {fileID: 2100000, guid: 577b1d6454c5c2047bc16ee520194a34, type: 2}
+  - {fileID: 2100000, guid: 56751b606fed7ac4f9efba865581aa68, type: 2}
+  - {fileID: 2100000, guid: ebd474bfa40ce6b458fcfdae9a093a5b, type: 2}
+  - {fileID: 2100000, guid: 7dab6f07f8814264d9d55b30b2382455, type: 2}
 --- !u!1 &7083972251282979905
 GameObject:
   m_ObjectHideFlags: 0

@@ -2338,7 +2338,6 @@ MonoBehaviour:
   shot: {fileID: 6215281206015534194, guid: 3c72f43acb9564a4186a2d13a9310258, type: 3}
   winText: {fileID: 2076367690}
   fireRate: 0.99
-  coralColor: 00000000000000000000000000000000
 --- !u!54 &1864900162
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3195,86 +3194,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.size3D
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.x.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.y.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.z.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.x.minMaxState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.y.minMaxState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: VelocityModule.z.minMaxState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[1].time
-      value: 0.1634806
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[2].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[0].value
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[1].value
-      value: 0.24709553
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[2].value
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[1].inSlope
-      value: 2.5281136
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[1].outSlope
-      value: 2.5281136
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049732570582407927, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
-      propertyPath: InitialModule.startSpeed.maxCurve.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
     - target: {fileID: 8748861676928878114, guid: 1301511ad1563c44bad15dd2b48c603e, type: 3}
       propertyPath: m_Name
       value: Player

@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Enemy : MonoBehaviour
 {
     public ParticleSystem deathPS;
+    public AudioSource enemyDeathSFX;
 
     [SerializeField]
     private Material[] deadColors;
@@ -49,6 +50,7 @@ public class Enemy : MonoBehaviour
     {
         //Vector3 deathpos = transform.position;
         deathPS.Play();
+        enemyDeathSFX.Play();
 
         RandomPosition();
 

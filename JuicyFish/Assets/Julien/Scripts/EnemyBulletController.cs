@@ -6,6 +6,7 @@ public class EnemyBulletController : MonoBehaviour {
 
 	private Transform bullet;
 	public float speed;
+	//public 
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,8 @@ public class EnemyBulletController : MonoBehaviour {
 		if (other.tag == "Player") {
 			Destroy (other.gameObject);
 			Destroy (gameObject);
+            other.GetComponent<PlayerController>().playerDeathSFX.Play();
+
 			GameOver.isPlayerDead = true;
 		} else if (other.tag == "Base") {
 			GameObject playerBase = other.gameObject;

@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour {
 
 			//EnemyBulletController called too?
 			if (Random.value > fireRate) {
-				Instantiate (shot, enemy.position, enemy.rotation);
+				Instantiate (shot, enemy.position, Quaternion.Euler(180f,-90f,0f));
 				enemyFireSFX.Play();
 			}
 

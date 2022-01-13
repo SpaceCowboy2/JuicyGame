@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishArrival : MonoBehaviour
 {
     [SerializeField]
-    private GameObject juiceFish;
+    private GameObject[] juiceFish;
 
 
 
@@ -33,7 +33,8 @@ public class FishArrival : MonoBehaviour
             rotator = 180;
         }
 
-        GameObject fish = Instantiate(juiceFish, new Vector3(posX, killedFish.transform.position.y, 0), Quaternion.identity);
+        GameObject fishPrefab = juiceFish[Random.Range(0, juiceFish.Length)];
+        GameObject fish = Instantiate(fishPrefab, new Vector3(posX, killedFish.transform.position.y, 0), Quaternion.identity);
         //fish.transform.rotation = Quaternion.Euler(fish.transform.rotation.x, fish.transform.rotation.y  + rotator, 90);
         int tworotations = Random.Range(0, 2);
         

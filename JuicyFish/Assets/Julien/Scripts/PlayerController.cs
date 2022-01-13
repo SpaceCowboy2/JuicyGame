@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+			Instantiate (shot, shotSpawn.position, Quaternion.Euler(0f,-90f,0f));
 			bubbles.Play();
 			playerFireSFX.Play();
 		}

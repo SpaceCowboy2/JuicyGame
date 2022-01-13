@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class MusicJuice : MonoBehaviour
 {
-    public GameObject juiceMusic;
-    public AudioClip musicClip;
-    public bool isJuiceMusic;
+    private bool isJuiceMusic;
 
     private void Start()
     {
@@ -25,6 +23,13 @@ public class MusicJuice : MonoBehaviour
 
     private void SetActive()
     {
-        juiceMusic.GetComponent<AudioSource>().PlayOneShot(musicClip);
+        if (isJuiceMusic)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+        else
+        {
+            GetComponent<AudioSource>().Pause();
+        }
     }
 }

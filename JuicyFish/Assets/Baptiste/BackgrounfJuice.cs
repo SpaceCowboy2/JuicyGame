@@ -16,7 +16,7 @@ public class BackgrounfJuice : MonoBehaviour
     void Update()
     {
         //Debug.Log(isJuiceBG);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             isJuiceBG = !isJuiceBG;
             SetActive();

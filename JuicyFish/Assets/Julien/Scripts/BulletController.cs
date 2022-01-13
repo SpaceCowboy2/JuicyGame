@@ -23,6 +23,8 @@ public class BulletController : MonoBehaviour {
 			other.enabled = false;
 
 			FishArrival.Instance.FishSpawn(other.gameObject);
+
+			if(other.GetComponent<Enemy>() != null)
 			ScoreAppear.Instance.ShowScore(other.gameObject);
 
 			Destroy(gameObject);

@@ -40,6 +40,7 @@ public class FishMove : MonoBehaviour
 
             }
         }
+        
     }
 
     void Update()
@@ -56,19 +57,22 @@ public class FishMove : MonoBehaviour
 
     private void ChangePosition()
     {
+        if (JuiceManager.i.fishMoveOn)
+        {
         // Ajouter mouvement de poisson de gauche à droite quand il se déplace
         float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
         float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
         positionToGo = new Vector3(spawnX, spawnY, Random.Range(0.0f, 10.0f));
         StartCoroutine(RotateFish());
         transform.DOMove(positionToGo,speed);
+        }
     }
 
     IEnumerator RandomPathFinding()
     {
         yield return new WaitForSeconds(5.0f);
-        ChangePosition();
-        StartCoroutine(RandomPathFinding());
+            ChangePosition();
+            StartCoroutine(RandomPathFinding());
     }
 
     IEnumerator RotateFish()

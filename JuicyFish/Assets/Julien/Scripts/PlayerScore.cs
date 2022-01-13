@@ -14,7 +14,15 @@ public class PlayerScore : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		scoreText.text = "Score: " + playerScore;
+	void Update ()
+    {
+        if (JuiceManager.i.scoreOn)
+        {
+            scoreText.text = "Score: " + playerScore;
+        }
+        else
+        {
+            scoreText.text = "";
+        }
 	}
 }

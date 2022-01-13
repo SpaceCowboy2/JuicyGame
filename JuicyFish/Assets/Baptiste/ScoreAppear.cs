@@ -30,8 +30,11 @@ public class ScoreAppear : MonoBehaviour
     {
         //scoreToShow = killedFish.
         Vector3 spawnPosition = killedFish.transform.position;
-        TextMeshProUGUI tempText = Instantiate(textToShow, spawnPosition, Quaternion.identity).GetComponent<TextMeshProUGUI>();
-        tempText.transform.SetParent(textParent.transform);
+        if (JuiceManager.i.scoreOn)
+        {
+            TextMeshProUGUI tempText = Instantiate(textToShow, spawnPosition, Quaternion.identity).GetComponent<TextMeshProUGUI>();
+            tempText.transform.SetParent(textParent.transform);
+        }
     }
 
 

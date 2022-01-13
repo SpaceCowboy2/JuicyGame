@@ -15,6 +15,10 @@ public class JuiceManager : MonoBehaviour
 
     [HideInInspector]
     public bool bubblesOn = false;
+    [HideInInspector]
+    public bool scoreOn = false;
+    [HideInInspector]
+    public bool fishMoveOn = false;
 
     private static JuiceManager instance;
 
@@ -62,6 +66,16 @@ public class JuiceManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             bubblesOn ^= true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            scoreOn ^= true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            fishMoveOn ^= true;
         }
     }
 

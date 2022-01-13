@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
     private float speed = 4;
     private Material mat1;
     private Material mat2;
+    [HideInInspector]
+    public bool isDead = false;
 
     [Min(0.25f)]public float socialDistancing;
     private int security = 0;
@@ -60,6 +62,8 @@ public class Enemy : MonoBehaviour
         mat1 = deadColors[colorIndex];
         mat2 = liveColors[colorIndex];
         GetComponent<MeshRenderer>().material = mat2;
+        isDead = true;
+        Debug.Log(isDead);
 
         //GetComponent<MeshRenderer>().material.Lerp(mat1, mat2, Mathf.PingPong(Time.time, speed) / speed);
     }

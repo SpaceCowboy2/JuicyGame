@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class JuiceManager : MonoBehaviour
 {
-    public GameObject Juice1;
-    public GameObject Juice2;
+    //public GameObject Juice1;
+    //public GameObject Juice2;
     /*public GameObject Juice3;
     public GameObject Juice4;
     public GameObject Juice5;
@@ -13,10 +13,28 @@ public class JuiceManager : MonoBehaviour
     public GameObject Juice7;
     public GameObject Juice8;*/
 
+    [HideInInspector]
+    public bool bubblesOn = false;
+
+    private static JuiceManager instance;
+
+    public static JuiceManager i
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
-        Juice1.SetActive(false);
-        Juice2.SetActive(false);
+        //Juice1.SetActive(false);
+        //Juice2.SetActive(false);
         /*Juice3.SetActive(false);
         Juice4.SetActive(false);
         Juice5.SetActive(false);
@@ -27,24 +45,29 @@ public class JuiceManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            bool isJuiceActive = true;
-            isJuiceActive = !isJuiceActive;
-            JuiceToActivate(Juice1, isJuiceActive);
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    bool isJuiceActive = true;
+        //    isJuiceActive = !isJuiceActive;
+        //    JuiceToActivate(Juice1, isJuiceActive);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    bool isJuiceActive = true;
+        //    isJuiceActive = !isJuiceActive;
+        //    JuiceToActivate(Juice2, isJuiceActive);
+        //}
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            bool isJuiceActive = true;
-            isJuiceActive = !isJuiceActive;
-            JuiceToActivate(Juice2, isJuiceActive);
+            bubblesOn ^= true;
         }
     }
 
     void JuiceToActivate(GameObject JuiceActivated, bool stateBool)
     {
-        JuiceActivated.SetActive(stateBool);
+        //JuiceActivated.SetActive(stateBool);
     }
 
 }

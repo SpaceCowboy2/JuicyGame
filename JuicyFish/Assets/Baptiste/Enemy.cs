@@ -49,7 +49,10 @@ public class Enemy : MonoBehaviour
     public void deathCoral()
     {
         //Vector3 deathpos = transform.position;
-        deathPS.Play();
+        if (JuiceManager.i.bubblesOn)
+        {
+            deathPS.Play();
+        }
         enemyDeathSFX.Play();
 
         RandomPosition();

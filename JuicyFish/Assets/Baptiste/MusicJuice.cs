@@ -6,7 +6,7 @@ public class MusicJuice : MonoBehaviour
 {
     private bool isJuiceMusic = false;
 
-    private void Start()
+    private void Awake()
     {
         SetActive();
     }

@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
 
 	public GameObject shot;
 	public TextMeshProUGUI winText;
+    public AudioSource enemyFireSFX;
 	public float fireRate = 0.997f;
 
 	void Start () {
@@ -32,10 +33,10 @@ public class EnemyController : MonoBehaviour {
 			//EnemyBulletController called too?
 			if (Random.value > fireRate) {
 				Instantiate (shot, enemy.position, enemy.rotation);
+				enemyFireSFX.Play();
 			}
 
-
-			if (enemy.position.y <= -4) {
+            if (enemy.position.y <= -4) {
 				GameOver.isPlayerDead = true;
 				Time.timeScale = 0;
 			}

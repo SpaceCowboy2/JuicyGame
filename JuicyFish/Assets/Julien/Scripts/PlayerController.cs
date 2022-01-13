@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public float maxBound, minBound;
 	public ParticleSystem bubbles;
+    public AudioSource playerFireSFX;
+    public AudioSource playerDeathSFX;
 
 	public GameObject shot;
 	public Transform shotSpawn;
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour {
 			nextFire = Time.time + fireRate;
 			Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
 			bubbles.Play();
+			playerFireSFX.Play();
 		}
 	}
 

@@ -6,6 +6,8 @@ using TMPro;
 public class EnemyController : MonoBehaviour {
 
 	private Transform enemyHolder;
+	private bool canGoRight = true;
+	private bool canGoDown = false;
 	public float speed;
 
 	public GameObject shot;
@@ -14,20 +16,15 @@ public class EnemyController : MonoBehaviour {
 
 	void Start () {
 		winText.enabled = false;
-		InvokeRepeating ("MoveEnemy", 0.1f, 0.3f);
+		//InvokeRepeating ("MoveEnemy", 0.1f, 0.5f);
 		enemyHolder = GetComponent<Transform> ();
+		StartCoroutine(MoveEnemyRight());
+		InvokeRepeating("MoveEnemy", 0.1f, 0.3f);
 	}
 
 	void MoveEnemy()
 	{
-		enemyHolder.position += Vector3.right * speed;
-
 		foreach (Transform enemy in enemyHolder) {
-			if (enemy.position.x < -10 || enemy.position.x > 10) {
-				speed = -speed;
-				enemyHolder.position += Vector3.down * 0.5f;
-				return;
-			}
 
 			//EnemyBulletController called too?
 			if (Random.value > fireRate) {
@@ -41,13 +38,70 @@ public class EnemyController : MonoBehaviour {
 			}
 		}
 
-		if (enemyHolder.childCount == 1) {
-			CancelInvoke ();
-			InvokeRepeating ("MoveEnemy", 0.1f, 0.25f);
-		}
 
 		if (enemyHolder.childCount == 0) {
 			winText.enabled = true;
 		}
+	}
+
+	IEnumerator MoveEnemyDown()
+    {
+		float timeElapsed = 0.0f;
+		float lerpDuration = 1.0f;
+		Vector3 actualPos = enemyHolder.position;
+
+		while(timeElapsed < lerpDuration)
+        {
+			enemyHolder.position = Vector3.Lerp(actualPos, actualPos + Vector3.down * 0.5f, timeElapsed / lerpDuration);
+			timeElapsed += Time.deltaTime;
+			yield return null;
+		}
+		
+		if(enemyHolder.position.x < 1)
+        {
+			StartCoroutine(MoveEnemyRight());
+		}
+		else
+        {
+			StartCoroutine(MoveEnemyLeft());
+		}
+		
+		yield return null;
+    }
+
+	IEnumerator MoveEnemyRight()
+	{
+		float timeElapsed = 0.0f;
+		float lerpDuration = 5.0f;
+
+		Vector3 actualPos = enemyHolder.position;
+
+		while (timeElapsed < lerpDuration)
+		{
+			enemyHolder.position = Vector3.Lerp(actualPos, new Vector3(10,enemyHolder.position.y,0), timeElapsed / lerpDuration);
+			timeElapsed += Time.deltaTime;
+			yield return null;
+		}
+
+		StartCoroutine(MoveEnemyDown());
+		yield return null;
+	}
+
+	IEnumerator MoveEnemyLeft()
+	{
+		float timeElapsed = 0.0f;
+		float lerpDuration = 5.0f;
+
+		Vector3 actualPos = enemyHolder.position;
+
+		while (timeElapsed < lerpDuration)
+		{
+			enemyHolder.position = Vector3.Lerp(actualPos, new Vector3(0.5f, enemyHolder.position.y, 0), timeElapsed / lerpDuration);
+			timeElapsed += Time.deltaTime;
+			yield return null;
+		}
+
+		StartCoroutine(MoveEnemyDown());
+		yield return null;
 	}
 }

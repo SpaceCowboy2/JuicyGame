@@ -34,7 +34,19 @@ public class FishArrival : MonoBehaviour
         }
 
         GameObject fish = Instantiate(juiceFish, new Vector3(posX, killedFish.transform.position.y, 0), Quaternion.identity);
-        fish.transform.rotation = Quaternion.Euler(fish.transform.rotation.x, fish.transform.rotation.y  + rotator, 90);
+        //fish.transform.rotation = Quaternion.Euler(fish.transform.rotation.x, fish.transform.rotation.y  + rotator, 90);
+        int tworotations = Random.Range(0, 2);
+        
+        if(tworotations == 0)
+        {
+            fish.transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
+        else if(tworotations == 1)
+        {
+            fish.transform.rotation = Quaternion.Euler(0, -90, 0);
+        }
+        
+       
 
         fish.GetComponent<FishMove>().positionToGo = killedFish.transform.position;
     }

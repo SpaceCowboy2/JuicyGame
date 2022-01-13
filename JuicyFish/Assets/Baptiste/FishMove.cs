@@ -60,6 +60,7 @@ public class FishMove : MonoBehaviour
         float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
         float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
         positionToGo = new Vector3(spawnX, spawnY, Random.Range(0.0f, 10.0f));
+        StartCoroutine(RotateFish());
         transform.DOMove(positionToGo,speed);
     }
 
@@ -68,5 +69,24 @@ public class FishMove : MonoBehaviour
         yield return new WaitForSeconds(5.0f);
         ChangePosition();
         StartCoroutine(RandomPathFinding());
+    }
+
+    IEnumerator RotateFish()
+    {
+        /*float timeElapsed = 0;
+        float lerpDuration = 1.0f;
+        Quaternion actualRotation = transform.rotation;
+        Quaternion wantedRotation = Quaternion.Euler(positionToGo.x, positionToGo.y, positionToGo.z);
+
+
+        while (timeElapsed < lerpDuration)
+        {
+            transform.rotation = Quaternion.Lerp(actualRotation, wantedRotation, timeElapsed / lerpDuration);
+            timeElapsed += Time.deltaTime;
+        }
+
+        transform.rotation = wantedRotation;*/
+        transform.LookAt(positionToGo);
+        yield return null;
     }
 }

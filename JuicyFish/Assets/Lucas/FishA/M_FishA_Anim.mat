@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: fishMat
+  m_Name: M_FishA_Anim
   m_Shader: {fileID: -6465566751694194690, guid: 70522269128ff5a43ab92cf15109ab5a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

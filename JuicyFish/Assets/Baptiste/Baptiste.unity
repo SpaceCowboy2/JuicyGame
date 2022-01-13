@@ -2100,6 +2100,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1386639039470419350, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
+      propertyPath: playerFireSFX
+      value: 
+      objectReference: {fileID: 1705825756}
+    - target: {fileID: 1386639039470419350, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
+      propertyPath: playerDeathSFX
+      value: 
+      objectReference: {fileID: 1705825756}
     - target: {fileID: 3658705785433438121, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2213,6 +2221,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 649200005909162590, guid: 1c27244d6182a00419e6a46a7e329886, type: 3}
   m_PrefabInstance: {fileID: 918389669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1705825756 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6787712081038314292, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
+  m_PrefabInstance: {fileID: 1551098168}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1760090728
 PrefabInstance:
@@ -2593,6 +2606,7 @@ MonoBehaviour:
   speed: 0.8
   shot: {fileID: 6215281206015534194, guid: 3c72f43acb9564a4186a2d13a9310258, type: 3}
   winText: {fileID: 2076367690}
+  enemyFireSFX: {fileID: 0}
   fireRate: 0.99
 --- !u!54 &1864900162
 Rigidbody:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MusicJuice : MonoBehaviour
 {
-    private bool isJuiceMusic;
+    private bool isJuiceMusic = false;
 
     private void Start()
     {
@@ -14,7 +14,7 @@ public class MusicJuice : MonoBehaviour
     void Update()
     {
         //Debug.Log(isJuiceBG);
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             isJuiceMusic = !isJuiceMusic;
             SetActive();
@@ -23,13 +23,6 @@ public class MusicJuice : MonoBehaviour
 
     private void SetActive()
     {
-        if (isJuiceMusic)
-        {
-            GetComponent<AudioSource>().Play();
-        }
-        else
-        {
-            GetComponent<AudioSource>().Pause();
-        }
+        Camera.main.GetComponent<AudioListener>().enabled = isJuiceMusic;
     }
 }

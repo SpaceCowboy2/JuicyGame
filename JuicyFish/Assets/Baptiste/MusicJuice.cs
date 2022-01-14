@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 
 public class MusicJuice : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class MusicJuice : MonoBehaviour
 
     private void SetActive()
     {
-        Camera.main.GetComponent<AudioListener>().enabled = isJuiceMusic;
+        float newVolume = isJuiceMusic ? 1f : 0f;
+        foreach (AudioSource source in FindObjectsOfType<AudioSource>())
+        {
+            source.volume = newVolume;
+        }
     }
 }

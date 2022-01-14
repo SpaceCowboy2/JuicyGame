@@ -24,7 +24,7 @@ public class MusicJuice : MonoBehaviour
 
     private void SetActive()
     {
-        float newVolume = isJuiceMusic ? 1f : 0f;
+        float newVolume = isJuiceMusic ? .5f : 0f;
         foreach (AudioSource source in FindObjectsOfType<AudioSource>())
         {
             source.volume = newVolume;

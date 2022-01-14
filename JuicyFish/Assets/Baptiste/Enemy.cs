@@ -63,7 +63,10 @@ public class Enemy : MonoBehaviour
         mat2 = liveColors[colorIndex];
         GetComponent<MeshRenderer>().material = mat2;
         isDead = true;
-        Debug.Log(isDead);
+        if (!JuiceManager.i.gameObject.GetComponent<CoralJuice>().juiceEnabled)
+        {
+            GetComponent<Renderer>().enabled = false;
+        }
 
         //GetComponent<MeshRenderer>().material.Lerp(mat1, mat2, Mathf.PingPong(Time.time, speed) / speed);
     }

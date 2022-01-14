@@ -6,29 +6,30 @@ public class CoralJuice : MonoBehaviour
 {
     public Transform enemyHolder;
 
-    private bool juiceEnabled = false;
+    [HideInInspector]
+    public bool juiceEnabled = false;
 
     void Awake()
     {
-        //SetActive();
+        SetActive();
     }
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Alpha8))
-        //{
-        //    juiceEnabled ^= true;
-        //    SetActive();
-        //}
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            juiceEnabled ^= true;
+            SetActive();
+        }
     }
 
     void SetActive()
     {
-        foreach (Transform coral in enemyHolder)
+        foreach (Enemy coral in FindObjectsOfType<Enemy>())
         {
             if (coral.GetComponent<Enemy>().isDead)
             {
-                coral.GetComponent<MeshRenderer>().enabled = juiceEnabled;
+                coral.GetComponent<Renderer>().enabled = juiceEnabled;
             }
         }
     }

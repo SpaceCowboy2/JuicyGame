@@ -2761,6 +2761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHolder: {fileID: 1864900163}
+  juiceEnabled: 0
 --- !u!1001 &2005962442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,6 +3279,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1255014926717929274, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
+      propertyPath: m_Size.x
+      value: 4.4077473
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255014926717929274, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
+      propertyPath: m_Center.x
+      value: 0.001216948
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255014926717929274, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
+      propertyPath: m_Center.z
+      value: -0.44394824
+      objectReference: {fileID: 0}
     - target: {fileID: 3658705785433438121, guid: 38c410ba7226afb4cae7614afebe6095, type: 3}
       propertyPath: m_RootOrder
       value: 1
